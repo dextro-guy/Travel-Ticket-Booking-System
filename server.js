@@ -1,3 +1,4 @@
+
 import express from 'express';
 import dotenv from 'dotenv';
 import {connectDB} from './config/db.js';
@@ -68,5 +69,4 @@ app.use((err, req, res, next) => {
   let {statusCode = 500, message = "Something Went Wrong..."} = err;
   res.status(statusCode).send({ message });
 });
-
 
